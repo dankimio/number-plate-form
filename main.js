@@ -5,8 +5,10 @@ document.querySelectorAll('#form input').forEach(input => {
     const input= event.target
     const maxlength = input.getAttribute('maxlength')
 
-    if (input.value.length >= maxlength) {
-      event.target.nextElementSibling.focus()
+    if (input.value.length < maxlength) {
+      return
     }
+
+    event.target.nextElementSibling.focus()
   })
 })
