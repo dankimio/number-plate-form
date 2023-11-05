@@ -9,6 +9,6 @@ document.querySelectorAll('#form input').forEach(input => {
       return
     }
 
-    event.target.nextElementSibling.focus()
+    event.target.nextElementSibling?.focus()
   })
 })
